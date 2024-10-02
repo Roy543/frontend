@@ -9,14 +9,14 @@ const DateScheduler = () => {
 
   const sendInviteToBackend = async (eventDetails) => {
     try {
-      const response = await fetch('https://192.168.0.104:5000/send-invite', { // Use your local IP here
+      const response = await fetch('https://backend-three-gray.vercel.app/send-invite', { // Update this URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(eventDetails),
       });
-
+  
       if (response.ok) {
         alert('Calendar invite sent successfully!');
       } else {
@@ -26,7 +26,7 @@ const DateScheduler = () => {
       alert('An error occurred. Please try again.');
       console.error(error);
     }
-  };
+  };  
 
   const handleSchedule = () => {
     if (selectedDate && email) {
