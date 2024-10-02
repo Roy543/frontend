@@ -30,7 +30,7 @@ const DateScheduler = () => {
 
   const handleSchedule = () => {
     if (selectedDate && email) {
-      fetch('https://backend-three-gray.vercel.app/send-invite', { // Use your local IP here
+      fetch('https://backend-three-gray.vercel.app/api/send-invite', { // Use your local IP here
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
