@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    font-family: 'Pacifico', cursive; /* Cute font */
+    background-image: url('./yamasa-n-jN0MgIpTnSs-unsplash.jpg'); /* Add your bokeh background image URL */
+    background-color: #FFE6E6; /* Light pink fallback background */
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.question-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    /* Removed the backdrop-filter blur here */
+}
+
+h1 {
+    color: #2F4F4F; /* Dark slate gray for text */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Global Button Styles */
+button {
+    padding: 15px 30px; /* Ample padding */
+    font-size: 18px; /* Larger text */
+    border: none; /* Remove default borders */
+    border-radius: 30px; /* Rounded edges */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Specific Button Colors */
+.yes-button {
+    background-color: #FFB6C1; /* Light pink */
+    color: #2F4F4F; /* Dark text */
+    border: 2px solid #FF69B4; /* Hot pink border */
+}
+
+.no-button {
+    background-color: #98FB98; /* Pale green */
+    color: #2F4F4F; /* Dark text */
+    border: 2px solid #3CB371; /* Medium sea green border */
+}
+
+/* Button Hover Effects */
+button:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Lighten on hover */
+    transform: scale(1.05); /* Slightly enlarge */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Button Hover Specific Colors */
+.yes-button:hover {
+    background-color: #FF69B4; /* Hot pink on hover */
+}
+
+.no-button:hover {
+    background-color: #3CB371; /* Medium sea green on hover */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Responsive font size */
+    }
+    .yes-button,
+    .no-button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0);
+    }
+    50% {
+        transform: translatey(-10px); /* Float up */
+    }
+    100% {
+        transform: translatey(0); /* Return */
+    }
+}
+
+.yes-button,
+.no-button {
+    animation: float 3s ease-in-out infinite; /* Add floating effect */
+}
+
+/* Form Container */
+form {
+    margin-top: 20px; /* Space above the form */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%; /* Full width */
+    padding: 12px; /* Ample padding */
+    margin: 10px 0; /* Margin for spacing */
+    border: 2px solid #E6E6FA; /* Soft lavender border */
+    border-radius: 15px; /* Rounded edges */
+    font-size: 16px; /* Larger text */
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+/* Input Hover Effect */
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="date"]:hover,
+input[type="time"]:hover,
+select:hover {
+    border-color: #2F4F4F; /* Change border color on hover */
+}
+
+/* Input Focus Effect */
+input:focus,
+select:focus {
+    border-color: #2F4F4F; /* Darker border on focus */
+    box-shadow: 0 0 5px rgba(47, 79, 79, 0.5); /* Shadow effect */
+}
+
+/* Label Styles */
+label {
+    font-size: 16px; /* Larger text */
+    color: #2F4F4F; /* Dark text */
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+/* Calendar and Time Input Styles */
+input[type="date"],
+input[type="time"] {
+    padding: 12px; /* Ample padding */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+/* Calendar and Time Input Focus Effect */
+input[type="date"]:focus,
+input[type="time"]:focus {
+    border-color: #2F4F4F; /* Darker border on focus */
+    box-shadow: 0 0 5px rgba(47, 79, 79, 0.5); /* Shadow effect */
+}
+
+/* Placeholder Text Styling */
+input::placeholder {
+    color: #A9A9A9; /* Light gray for placeholder text */
+    font-style: italic; /* Italic for distinction */
+}
+
+/* DatePicker styles */
+.date-picker {
+    width: 100%; /* Full width */
+    padding: 12px; /* Ample padding */
+    margin: 10px 0; /* Margin for spacing */
+    border: 2px solid #E6E6FA; /* Soft lavender border */
+    border-radius: 15px; /* Rounded edges */
+    font-size: 16px; /* Larger text */
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+/* DatePicker focus effect */
+.date-picker:focus {
+    border-color: #2F4F4F; /* Darker border on focus */
+    box-shadow: 0 0 5px rgba(47, 79, 79, 0.5); /* Shadow effect */
+}

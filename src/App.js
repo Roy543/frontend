@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Question from './components/Question';
+import ResponseScreen from './components/ResponseScreen';
+import DateScheduler from './components/DateScheduler';
 import './App.css';
 
 function App() {
+  const [step, setStep] = useState(1);
+
+  const handleYes = () => {
+    setStep(2);
+  };
+
+  const handleSchedule = () => {
+    setStep(3);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {step === 1 && <Question onYes={handleYes} />}
+      {step === 2 && <ResponseScreen onSchedule={handleSchedule} />}
+      {step === 3 && <DateScheduler />}
     </div>
   );
 }
