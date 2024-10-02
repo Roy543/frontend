@@ -9,7 +9,7 @@ const DateScheduler = () => {
 
   const sendInviteToBackend = async (eventDetails) => {
     try {
-      const response = await fetch('https://backend-three-gray.vercel.app/send-invite', { // Update this URL
+      const response = await fetch('https://backend-three-gray.vercel.app/api/send-invite', { // Update this URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
