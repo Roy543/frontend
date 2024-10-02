@@ -9,7 +9,7 @@ const DateScheduler = () => {
 
   const sendInviteToBackend = async (eventDetails) => {
     try {
-      const response = await fetch('http://192.168.0.104:5000/send-invite', { // Use your local IP here
+      const response = await fetch('https://192.168.0.104:5000/send-invite', { // Use your local IP here
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
